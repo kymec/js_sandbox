@@ -18,3 +18,11 @@ function clearNumbers(arr){
     });
     return arr;
 }
+
+function reverse(){
+    var arr = [];
+    for (var i = arguments.length - 1; i >= 0; i-=1){
+        arr.push(arguments[i].split("").reverse().join("")); 
+    }    
+    return arr;
+}
