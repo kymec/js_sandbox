@@ -7,6 +7,7 @@ class Human {
     }
     sayHello(){
         console.log("Hello, my name is " + this.name + ", I am " + this.age + " years old");
+       // console.log(`Hello, my name is ${this.name} , I am ${this.age} years old"`);
     }
 }
 
@@ -28,8 +29,8 @@ class AlevelStudent extends Human{
 }
 
 class Calculator {
-    constructor(result){
-        this.result = result;
+    constructor(){
+        this.result = 0;
     }
     reset(){
         this.result = 0;
@@ -100,17 +101,14 @@ class Line{
 
 class WeightedPoint extends Point{
     constructor(x, y, weight){
-        super();
-        this.x = x;
-        this.y = y;
+        super(x, y);        
         this.weight = weight;
     }
     toString(){
         return (this.getWeight() + "&" + super.toString())
     }
     set(x, y, weight){
-        this.x = x;
-        this.y = y;
+        super.set(x, y);
         this.weight = weight;
     }
     getWeight(){
