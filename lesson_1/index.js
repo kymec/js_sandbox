@@ -45,3 +45,13 @@ function transformData(arr){
     })
     return resObj;
 }
+
+function addInfinite(arg1)
+ {
+    sum.result = arg1;
+    function sum(arg2){
+        sum.result += arg2;
+        return sum;
+    }
+    return sum;
+ }
