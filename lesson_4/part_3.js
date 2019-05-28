@@ -1,6 +1,6 @@
 //Задача 4
 function func4(arr){
-    let max = 0;
+    let max = -Infinity;
     function sum(arrMin){
         let sumAr = 0;
         for (let s = 0; s < arrMin.length; s += 1){
