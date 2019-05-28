@@ -99,20 +99,29 @@ function calculate(){
             do{
               result = prompt(`Введите k для рассчёта формулы y = kx + b`);  
             }            
-            while(typeof(+result) !== "number" || isNaN(result) || result == null || result == "");
+            while((typeof(+result) !== "number" || isNaN(result) || result === null || result == "") && result !== "exit");            
             resObj.history.push(result);
+            if(result === "exit"){
+                return resObj;
+            }
             resObj.args.k = +result;
             do{
                 result = prompt(`Введите x для рассчёта формулы y = kx + b`);
             }
-            while(typeof(+result) !== "number" || isNaN(result) || result == null || result == "");
+            while((typeof(+result) !== "number" || isNaN(result) || result === null || result == "") && result !== "exit");
             resObj.history.push(result);
+            if(result === "exit"){
+                return resObj;
+            }            
             resObj.args.x = +result;  
             do{
                 result = prompt(`Введите b для рассчёта формулы y = kx + b`);
             }
-            while(typeof(+result) !== "number" || isNaN(result) || result == null || result == "");
+            while((typeof(+result) !== "number" || isNaN(result) || result === null || result == "") && result !== "exit");
             resObj.history.push(result);
+            if(result === "exit"){
+                return resObj;
+            }            
             resObj.args.b = +result;
             y = resObj.args.k * resObj.args.x + resObj.args.b;
             alert(y);
@@ -122,8 +131,11 @@ function calculate(){
             do{
                 result = prompt(`Введите x для рассчёта формулы y = x^2`);
             }
-            while(typeof(+result) !== "number" || isNaN(result) || result == null || result == "")
+            while((typeof(+result) !== "number" || isNaN(result) || result === null || result == "") && result !== "exit")            
             resObj.history.push(result);
+            if(result === "exit"){
+                return resObj;
+            }
             resObj.args.x = +result;
             y = Math.pow(resObj.args.x, 2);
             alert(y);
