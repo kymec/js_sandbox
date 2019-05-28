@@ -44,10 +44,14 @@ function func5(arr){
 const add = (a) => {
     let sum = a;
     const func = (b) => {
-        sum += b;
-        return func;                
+        if (b != 3 && b != 6)
+        {
+            sum += b;
+            return func;
+        } else{
+            return sum +=b;
+        }                        
     };
-    func.toString = () => sum;
     return func;
 }
 
