@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel ./index.html",
-    "build": "rm -rf dist && parcel build ./index.html --public-url /kymec",
+    "build": "rm -rf dist && parcel build ./lesson_6/index.html --public-url /kymec",
     "deploy": "gh-pages -d dist"
   },
   "author": "",
