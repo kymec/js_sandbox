@@ -10,5 +10,11 @@
     "deploy": "gh-pages -d dist"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  }
 }

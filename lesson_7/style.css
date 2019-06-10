@@ -5,6 +5,7 @@
 }
 .img {
     width: 100%;
+    transition: width 500ms;
 }
 .button {
     position: absolute;
@@ -19,4 +20,7 @@
     height: 30px;
     cursor: pointer;
     text-align: center;
+}
+.button:hover{
+    background-color: beige;
 }
