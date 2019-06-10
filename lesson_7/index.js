@@ -16,12 +16,14 @@ class MiniSlider {
     }
     hideAll(){        
         for (let i = 0; i < this.len; i += 1){
-            this.img[i].style.display = "none";
+            this.img[i].style.width = "0";
+            //this.img[i].style.display = "none";
         }
     }
     show(n){
-        this.n = n;
+        this.n = n;        
         this.img[n].style.display = "block";
+        this.img[n].style.width = "100%";
     }
     createButtons(){
         this.button1 = document.createElement('div');
