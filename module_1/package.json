@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "mask-input": "^1.0.1",
+    "parcel": "^1.12.3"
   }
 }
