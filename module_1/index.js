@@ -1,3 +1,4 @@
+//1 задание
 function matrixDiff(arr1, arr2){
     let sum = 0;
     if(arr1.length == arr2.length){
@@ -18,6 +19,7 @@ function matrixDiff(arr1, arr2){
 }
 window.matrixDiff = matrixDiff;
 
+//2 задание
 function strangeSearch(stringArr){
     let div = []
     let input = [];
@@ -65,6 +67,8 @@ function strangeSearch(stringArr){
 }
 window.strangeSearch = strangeSearch;
 
+
+//4 задание
 import cat from "./cat.png";
 function stickyСat(){
 
@@ -97,6 +101,12 @@ function unstickTheСat(){
 }
 window.stickyСat = stickyСat;
 window.unstickTheСat = unstickTheСat;
+
+//3 задание
+import MaskedInput from './mask';
+const mask = new MaskedInput;
+
+
 
 
 
