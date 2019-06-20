@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Converter</title>
+    <style>
+        .conv {
+            display: inline-block;
+            margin: 20px 20px 0 20px;
+            text-align: center;
+        }
+        #arrow {
+            width: 30px;
+            margin-bottom: 10px;
+        }
+        #arrow:hover{
+            cursor: pointer;
+        }
+        .main {
+            text-align: center;
+            background-color: lightblue;
+            width: 600px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            font-size: 18px;
+        }
+        .head, #result {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 24px;
+        }
+        #result {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 30px;
+            color: darkblue;
+        }
+        #dateFrom, #dateTo {
+            font-size: 16px;
+            line-height: 26px;
+            width: 150px;
+        }
+        input {
+            font-size: 24px;
+            width: 140px;
+        }
+        select {
+            font-size: 20px;
+        }
+        #button {
+            margin: 20px;
+            width: 120px;
+            height: 50px;
+            font-size: 24px;
+        }
+        #list {
+            text-align: left;
+        }
+        .listDiv {
+            display: inline;
+            margin: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="head">Конвертер валют</div>          
+        <div class="conv">
+            <span>Отдаём</span>
+            <select id="selectFrom">
+                <option>USD</option>
+                <option>EUR</option>
+                <option>GBP</option>
+            </select>
+            <div>Сколько нужно обменять:</div> 
+            <input type="number" id="from" min="0">
+        </div>
+        <div class="conv">
+            <img id="arrow" src="./arrow.png" title="Поменять местами">
+            <div>или</div>
+        </div>
+        <div class="conv">
+            <span>Получаем</span>
+            <select id="selectTo">
+                <option>GBP</option>
+                <option>EUR</option>
+                <option>USD</option>
+            </select>
+            <div>Сколько нужно получить:</div>         
+            <input type="number" id="to" min="0">
+        </div>     
+        <div id="result"></div>
+        <div class="head">Курс за период</div>
+        <div class="conv">
+            <span>Курс</span>
+            <select id="periodCur1">
+                <option>EUR</option>
+                <option>USD</option>
+                <option>GBP</option>
+            </select>
+            <span>к</span>
+            <select id="periodCur2">
+                <option>USD</option>
+                <option>EUR</option>
+                <option>GBP</option>
+            </select>
+        </div> 
+        <div class="conv">
+            <span>Период с:</span>
+            <input type="date" id="dateFrom" min="1999-01-01" value="2019-01-01">
+            <span>по:</span>
+            <input type="date" id="dateTo" min="1999-01-01" value="2019-01-10">
+            <button id="button">Показать</button>
+        </div>
+        <div id="list">
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
