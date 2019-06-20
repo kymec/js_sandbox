@@ -82,8 +82,9 @@ const dateFrom = document.getElementById('dateFrom');
 const dateTo = document.getElementById('dateTo');
 
 button.addEventListener("click", () => {
-    for (let i = 0; i < list.children.length * 4; i += 1){
-        list.children[0].remove();
+    let k = list.children.length;
+    for (let i = 0; i < k; i += 1){
+        list.children[0].remove();        
     }
     if (dateFrom.value === "" || dateTo.value === ""){
         result.innerHTML = 'дата не может быть пустой';
@@ -111,10 +112,27 @@ button.addEventListener("click", () => {
     result.innerHTML = '';
     result.style.color = "darkblue";    
     button.disabled = true;
+
     fetch(`https://api.exchangeratesapi.io/history?base=${periodCur1.value}&start_at=${dateFrom.value}&end_at=${dateTo.value}`, {method:"GET"})
     .then(res => res.json())
     .then(res => {
+        let resultString = [];
         for (let value in res.rates){
+            resultString.push({
+                'date': value,
+                'currency': `${periodCur1.value}/${periodCur2.value}`,
+                'exchange': res.rates[`${value}`][`${periodCur2.value}`]
+            });
+        }
+        //Сортировка по дате
+        resultString.sort(function(a,b){ 
+            if (a.date > b.date) { 
+              return 1; } 
+            if (a.date < b.date) { 
+              return -1; } 
+            return 0; 
+          });
+        for (let j = 0; j < resultString.length; j += 1){            
             const div = document.createElement('div');
             list.appendChild(div);             
             const div1 = document.createElement('div');
@@ -126,10 +144,9 @@ button.addEventListener("click", () => {
             div1.className = "listDiv";
             div2.className = "listDiv";
             div3.className = "listDiv";      
-            let str = res.rates[`${value}`][`${periodCur2.value}`];            
-            div1.innerHTML = `${value}`;
-            div2.innerHTML = `${periodCur1.value}/${periodCur2.value}`;
-            div3.innerHTML = `${str}`;
+            div1.innerHTML = resultString[j]['date'];
+            div2.innerHTML = resultString[j]['currency'];
+            div3.innerHTML = resultString[j]['exchange'];
         }
         button.disabled = false;
     });
