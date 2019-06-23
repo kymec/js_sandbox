@@ -7,17 +7,35 @@
     <title>Document</title>
     <style>
         div {
-            margin: 20px;
+            padding: 20px;
+            width: 400px;
+            background-color: lightblue;
+            text-align: center;
+        }
+        div div {
+            padding: 0;
+        }
+        ol {
+            display: inline-block;
+            margin: 10px auto;
+            padding: 0;
         }
         li {
             position: relative;
-            width: 150px;
+            width: 240px;
+            text-align: left;
+        }
+        li:nth-child(2n) {
+            background-color: rgb(110, 212, 212);
         }
         li img {
             position: absolute;
             right: 0;
             width: 20px;
             cursor: pointer;
+        }
+        button {
+            margin-left: 10px;
         }
     </style>
 </head>
