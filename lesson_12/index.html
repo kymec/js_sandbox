@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TODO list</title>
     <style>
-        body {
-            
-        }
         #todo {
+            position: relative;
             width: 600px;
             background-color: aquamarine;
             text-align: center;
             margin: 50px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            font-size: 20px;
         }
         #list {
             list-style: none;
             padding-left: 0;
+            margin: 0;
         }
         li {
             text-align: start;
@@ -25,15 +26,59 @@
         }
         li div{
             display: inline-block;
+            width: 180px;
         }
+        li img {
+            width: 15px;
+            cursor: pointer;
+            opacity: 0.1;
+        }
+        li img:hover{
+            opacity: 0.5;
+        }
+        #checkAll {
+            color: rgb(145, 135, 135);
+            font-size: 70%;
+            cursor: pointer;
+        }
+        #checkAll:hover {
+            color: black
+        }
+        .bottom {
+            display: inline;
+            font-size: 70%;
+            cursor: pointer;
+        }
+        .bottom:hover {
+            border: 1px solid grey;
+            border-radius: 3px;
+        }
+        #radio1 {
+            position: absolute;
+            left: 10px;
+        }
+        #radio2 {
+            position: absolute;
+            left: 10px;
+            top: 50px;
+        }
+
     </style>
 </head>
 <body>
     <div id="todo">
         <div>TODO</div>
-        <input type="text" id="input">
+        <div  id="radio1"><input id="binRadio" name="radio" type="radio">JSONBin</div>
+        <div  id="radio2"><input id="binRadio2" name="radio" type="radio">LocalStorage</div>
+        <input type="text" id="input">        
+        <div id="checkAll">Check / Uncheck all</div>
         <ul id="list">
         </ul>
+        <div>
+            <div id="all" class="bottom">All</div>
+            <div id="active" class="bottom">Active</div>
+            <div id="completed" class="bottom">Completed</div>
+        </div>
     </div>
     <script src="index.js"></script>
 </body>
