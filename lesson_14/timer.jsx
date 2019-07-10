@@ -40,9 +40,12 @@ export default class Timer extends React.Component {
             stopState: true,
         });
     }
+    componentWillUnmount() {
+        clearInterval(this.state.intervalId);
+    }
     render() {
         return ( 
-            <div>
+            <div  id="timer">
                 <button disabled={this.state.startState} onClick={this.start.bind(this)}>Start</button>
                 <button disabled={this.state.pauseState} onClick={this.pause.bind(this)}>Pause</button>
                 <button disabled={this.state.stopState} onClick={this.stop.bind(this)}>Stop</button>
