@@ -1,46 +1,60 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class CountrySelect extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+
+        if (!CountrySelect.Countries) {
+            CountrySelect.Countries = fetch('https://restcountries.eu/rest/v2/all')
+              .then(res => res.json());
+          }
+      
+          CountrySelect.Countries
+            .then(countries => this.setState({ countries }))
+            .catch(error => this.setState({ error }))
+        
         this.state = {
-            country: [
-                {}
-            ],
-            item: 0,
+            selectedCode: props.defaultCountry,
+            countries: [],
+            error: false,
         };
-        this.getObj();
     }
-    getObj() {
-        fetch('https://restcountries.eu/rest/v2/all',{
-            method: 'GET',
-        })
-        .then(response => response.json())
-        .then(response => {
-            
-                this.setState({
-                country: response,          
-            });
-            this.loadList();
-        });
-    }
-    loadList(){
-        let result = [];
-        for (let i = 0; i < this.state.country.length; i += 1){
-            
-            result.push(
-                <li key={i}>
-                {this.state.country[i]['name']}
-                    <div><img src={this.state.country[i]['flag']}></img></div>
-                </li>)                      
-        }
-        return result;
+    onClick(code) {
+        this.setState({ selectedCode: code });
     }
     render() {
+        if (this.state.error) {
+          return <div>{this.state.error.toString()}</div>
+        }
+    
         return (
-            <ul  style={{maxHeight: `${this.props.maxheight}`}}>
-                {this.loadList()}
-            </ul>
+          <div className="country" style={{ maxHeight: `${this.props.maxHeight}px` }}>
+            {this.state.countries.map((country, key) => (
+              <div
+                key={key}
+                onClick={this.onClick.bind(this, country.alpha2Code)}
+                style={{                  
+                  backgroundColor: this.state.selectedCode === country.alpha2Code
+                    ? !this.props.disabled ? 'lightblue' : ''
+                    : ''
+                }}
+              >
+                {country.name} - {country.alpha2Code}<img src={country.flag}></img>
+              </div>
+            ))}
+          </div>
         );
     }
 }
+
+CountrySelect.defaultProps = {
+    maxHeight: 200,
+    defaultCountry: '',
+  };
+  
+  
+  CountrySelect.propTypes = {
+    maxHeight: PropTypes.number.isRequired,
+    defaultCountry: PropTypes.string,
+  };
