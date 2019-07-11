@@ -1,0 +1,201 @@
+body {
+    background-color: black;
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    position: absolute;
+    width: 180px;
+    height: 150px;
+    left: calc(50% - 220px/2);
+    top: calc(50% - 150px/2 - 150px);
+    text-transform: uppercase;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+    
+    color: #FCFCFC;
+}
+address {
+    position: absolute;
+    width: 226px;
+    height: 42px;
+    left: calc(50% - 226px/2);
+    top: calc(50% - 42px/2 - 45px);
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    align-items: center;
+    
+    color: #FCFCFC;
+}
+#error {
+    position: absolute;
+    width: 226px;
+    height: 42px;
+    left: calc(50% - 226px/2);
+    top: calc(50% - 42px/2 - 20px);
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    
+    color: #FF473A;
+}
+#login {
+    position: absolute;
+    left: calc(50% - 250px/2);
+    top: calc(50% - 42px/2 + 10px);
+    width: 223px;
+    height: 41px;
+    
+    background: #FFFFFF;
+
+    padding-left: 15px;
+    padding-right: 12px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    
+    color: #000000;
+}
+#password {
+    position: absolute;
+    left: calc(50% - 250px/2);
+    top: calc(50% - 42px/2 + 58px);
+    width: 223px;
+    height: 41px;
+    
+    background: #FFFFFF;
+
+    padding-left: 15px;
+    padding-right: 12px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    
+    color: #000000;
+}
+#forgot {
+    position: absolute;
+    width: 250px;
+    height: 24px;
+    top: calc(50% - 42px/2 + 100px);
+    left: calc(50% - 250px/2 + 140px);
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    
+    color: #FCFCFC;
+}
+#button, #buttonApp{
+    position: absolute;
+    left: calc(50% - 250px/2);
+    top: calc(50% - 42px/2 + 145px);   
+    
+    width: 250px; 
+    height: 42px;
+    border: none;
+    background: #FF473A;
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+#button[disabled] {
+    background: #80231A;
+    color: #808080;
+}
+#dont {
+    position: absolute;
+    left: calc(50% - 250px/2);
+    top: calc(50% - 42px/2 + 187px);
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    
+    color: #FCFCFC;
+}
+::-webkit-input-placeholder{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    
+    color: #000000;
+}
+#react {
+    position: absolute;
+    width: 226px;
+    height: 37px;
+    left: calc(50% - 226px/2);
+    top: calc(50% - 37px/2 + 150px);
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    
+    color: #FCFCFC;
+}
+#img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 100px/2);
+    top: calc(50% - 100px/2 + 50px);
+    
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+}
+
+#react span {
+    color: #FFFFFF;
+    font-weight: 600;
+
+}
+
+#buttonApp {
+    top: calc(50% - 42px/2 + 250px); 
+}
