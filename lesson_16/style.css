@@ -1,0 +1,25 @@
+body {
+    background-color: lightgray;
+
+}
+#mainIntro, #firstStep {
+    width: 375px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#buttonIntro {
+    margin: 0 auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(125.58deg, #BAFB67 -5.37%, #00D23A 196.64%);
+    cursor: pointer;
+}
+#buttonNext {
+    margin: 10px auto;
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(125.58deg, #BAFB67 -5.37%, #00D23A 196.64%);
+}
