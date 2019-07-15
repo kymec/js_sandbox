@@ -7,6 +7,7 @@ export default class Input extends React.Component {
             validated: this.props.validated || false,
             borderColor: this.props.borderColor,
             type: this.props.type,
+            placeholder: this.props.placeholder,
         }
     }
     onChange(change) {
@@ -32,8 +33,9 @@ export default class Input extends React.Component {
                     min="0"
                     className="input" 
                     id={this.props.name}
-                    style={{borderBottom: `2px solid ${this.props.borderColor}`}}
+                    style={{borderBottom: `3px solid ${this.props.borderColor}`}}
                     onChange={this.onChange.bind(this)}
+                    placeholder={this.props.placeholder}
                 >
                 </input>
             </div>
