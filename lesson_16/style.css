@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+body {
+    background: linear-gradient(336.91deg, #F0F4FD -56.86%, #FFFFFF 126.39%);
+}
+#introBall1 {
+    position: absolute;
+    left: 21px;
+    top: 4.93%;
+
+    background: linear-gradient(147.47deg, #FEB665 24.48%, #F66EB4 118.65%);
+    border-radius: 50%;
+}
+#introBall2 {
+    position: absolute;
+    left: 71.2%;
+    top: 20.42%;
+    
+    background: linear-gradient(228.76deg, #2DEEF9 -34.42%, #E084F1 127.18%);
+    transform: rotate(-15.82deg);
+    border-radius: 50%;
+}
+#introBall3 {
+    position: absolute;
+    left: 83px;
+    right: 49.89%;
+    top: 91.31%;
+    bottom: -24.69%;
+}
+#introBook {
+    width: 212px;
+    height: 212px;
+    margin: 197px auto;
+    
+    background: linear-gradient(73.12deg, #25CED1 -19.51%, #34E6E9 58.02%, #6AFCFF 138%);
+    border-radius: 50%;
+}
+#introBookSvg {
+    margin: 67.5px auto;
+    top: 67.5px;
+}
+h1 {
+    position: absolute;
+    width: 375px;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    
+    color: #384F7D;
+}
+p {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    width: 300px;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+    
+    text-align: center;
+    
+    color: rgba(56, 79, 125, 0.8);
+}
+#pIntro {
+    margin: 492px auto 0;
+    
+}
+#h1Intro {
+    margin: 440px auto 0;
+}
+button {
+    background: linear-gradient(125.58deg, #BAFB67 -5.37%, #00D23A 196.64%);
+    
+}
+#buttonIntro {
+    margin: 0 auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+.stepBall1 {
+    position: absolute;
+    width: 299px;
+    height: 299px;
+    left: -57px;
+    top: -139px;
+}
+.stepBall2 {
+    position: absolute;
+    left: calc(50% - 68px);
+    top: 67px;
+}
+.stepBall3 {
+    position: absolute;
+    left: 78.13%;
+    top: 339px;
+    z-index: -1;
+}
+.lamp {
+    position: absolute;
+    left: calc(50% - 34px);
+    top: 99px;
+}
+#head2, #head3 {
+    top: 228px;
+}
+#firstP, #secondP {
+    margin: 280px auto 0;
+}
+#firstForm, #secondForm {
+    margin: 340px auto 0;
+    text-align: center;
+    width: 315px;
+}
+#firstBottom {
+    margin: 709px auto 0;
+}
+.inputText {
+    margin: 20px 0 0 0;
+    text-align: start;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: rgba(68, 89, 132, 0.3);
+}
+.input {
+    border-radius: 8px;
+    width: 315px;
+    height: 48px;
+    border: none;
+    box-sizing:border-box;
+    padding: 15px 58px 13px 22px;
+    color: rgba(56, 79, 125, 0.65);
+    box-shadow: 4px 12px 25px rgba(71, 55, 255, 0.08);
+}
+.input::placeholder {    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: rgba(56, 79, 125, 0.65);
+}
+#countryAge {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#countryAge input{
+    width: 150px;
+}
+
+#mainIntro, #firstStep, #secondStep {
+    width: 375px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#buttonNext, #buttonSignUp {
+    cursor: pointer;
+    margin: 50px auto 0;
+    width: 315px;
+    height: 56px;
+    background: linear-gradient(166.04deg, #BAFB67 -5.37%, #00D23A 196.64%);
+    border-radius: 8px;
+    border: none;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+    box-shadow: 0px 10px 15px #DDEBDC;
+}
+#firstBottom, #secondBottom {
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #445984;
+}
+#secondBottom {
+    width: 315px;
+    margin: 19px auto 0;
+}
+
+#firstBottom a {
+    font-weight: 600;
+}
+
+#loading {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(201.49deg, #FEB665 16.19%, #F66EB4 75.38%);
+}
+#loadingText {
+    position: absolute;
+    left: 31.47%;
+    right: 31.47%;
+    top: 55.67%;
+    bottom: 41.63%;
+}
