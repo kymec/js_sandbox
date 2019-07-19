@@ -1,5 +1,3 @@
-//дз было не совсем правильно сделано, по-этому не всё получилось
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, Link, Redirect, Prompt} from 'react-router-dom';
@@ -80,7 +78,7 @@ class MainPage extends React.Component {
     }
     form() {
         return (
-            <form id="form" style={{display: `${this.state.hide}`}}>
+            <div id="form" style={{display: `${this.state.hide}`}}>
                 <input 
                     id="login" 
                     onChange={this.onChangeEmail.bind(this)}
@@ -101,7 +99,7 @@ class MainPage extends React.Component {
                     disabled={this.state.buttonDisabled}
                 ><div>Log in</div></button>
                 <a href="signup" id="dont">Don't have an account</a>
-            </form>
+            </div>
         );
     }
     error() {       
